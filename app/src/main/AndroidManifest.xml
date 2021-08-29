@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EndEx">
-        <activity android:name=".InfoAccount"></activity>
+        <activity android:name=".InfoAccount"
+            android:configChanges="orientation|screenSize"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
