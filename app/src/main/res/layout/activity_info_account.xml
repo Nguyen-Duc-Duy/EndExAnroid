@@ -1,9 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InfoAccount">
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    tools:context=".InfoAccount"
+    android:background="@color/bkap_bold"
+    android:orientation="vertical"
+    android:gravity="center">
+    <RelativeLayout
+        android:id="@+id/boxTle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="@null">
+        <TextView
+            android:id="@+id/tleBrand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BKAP Bank"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:textColor="@color/bkap_white"
+            android:textAlignment="center"/>
+        <TextView
+            android:id="@+id/tleNameApp"
+            android:layout_below="@id/tleBrand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Internet Banking"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="@color/bkap_white"
+            android:textAlignment="center"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/boxTle"
+        android:layout_weight="@null">
+        <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnLogin"
+            android:layout_alignParentTop="true">
+        <LinearLayout
+            android:id="@+id/formAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+            <EditText
+                android:id="@+id/valFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Họ và Tên"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/bkap_white"
+                android:textColorHint="@color/bkap_white"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="20dp"
+                android:paddingBottom="15dp"
+                android:inputType="text"/>
+            <EditText
+                android:id="@+id/valCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="CMND / Hộ Chiếu"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/bkap_white"
+                android:textColorHint="@color/bkap_white"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="20dp"
+                android:inputType="textPassword"/>
+            <EditText
+                android:id="@+id/valUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email / Tên Đăng Nhập"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/bkap_white"
+                android:textColorHint="@color/bkap_white"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="20dp"
+                android:inputType="textPassword"/>
+            <EditText
+                android:id="@+id/valPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Mật Khẩu"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/bkap_white"
+                android:textColorHint="@color/bkap_white"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="20dp"
+                android:inputType="textPassword"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tôi đồng ý với điều khoản, điều kiện của nhân hàng BKAP bank"
+                android:textSize="20dp"
+                android:textColor="@color/bkap_white"
+                android:layout_margin="30dp"
+                android:buttonTint="@color/bkap_white"/>
+        </LinearLayout>
+    </ScrollView>
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đăng Nhập"
+            android:backgroundTint="@color/bkap_btn"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="100dp"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+</LinearLayout>
